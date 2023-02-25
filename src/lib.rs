@@ -194,9 +194,9 @@ impl Build {
             // right now) but we don't actually need this most of the time.
             // API of engine.c ld fail in Windows.
             // Disable engine module unless force-engine feature specified
-            if !cfg!(feature = "force-engine") {
-                configure.arg("no-engine");
-            }
+            // if !cfg!(feature = "force-engine") {
+            //     configure.arg("no-engine");
+            // }
         }
 
         if target.contains("musl") {
